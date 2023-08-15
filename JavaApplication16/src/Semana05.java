@@ -7,6 +7,21 @@ public class Semana05 {
     
     public static void main(String[] args) {
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
         ArrayList<Cachorro> listaDeCachorros = new ArrayList<>();
         
         
@@ -31,7 +46,8 @@ public class Semana05 {
         
         for (int i = 0; i < listaDeCachorros.size(); i++) {
             System.out.println(listaDeCachorros.get(i).getNome());
-        }
+
+        }*/
     }
     
 }
