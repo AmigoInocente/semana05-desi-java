@@ -1,13 +1,17 @@
 
+import View.Sistema;
 import java.util.ArrayList;
-
+import Banco.Conta;
 
 public class Semana05 {
 
-    
+    public static ArrayList<Conta> banco = new ArrayList<>();
     public static void main(String[] args) {
         
-        
+       
+        new Sistema().setVisible(true);
+    
+    }
         
         
         

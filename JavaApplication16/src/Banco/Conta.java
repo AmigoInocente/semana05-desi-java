@@ -1,12 +1,14 @@
-package exercicioBanco;
+package Banco;
 
+import Banco.Pessoa;
+import Banco.Pessoa;
 import java.util.Random;
 
 class Conta {
 
     public Conta(Pessoa titular) { 
-        this.saldo = 0.0;
         this.titular = titular;
+        this.saldo = 0.0;
         this.numero = this.gerarNumeroConta();
     }
 
@@ -42,11 +44,27 @@ class Conta {
     }
     
     
-    private int numero;
-    private double saldo;
-    private Pessoa titular;
+    public int numero;
+    public double saldo;
+    public Pessoa titular;
+    
+    public void transferir(Conta destinatario, double valor){
+        if(this.saldo >= valor){
+            this.saldo -= valor;
+            destinatario.saldo += valor;
+            System.out.printf(this.titular.getNome() + "Saldo após transferência: R$%.2f%", this.saldo);
+            System.out.println("");
+            System.out.printf(destinatario.getTitular().getNome() + "Saldo após transferência: R$%.2f%", destinatario.saldo);
+            System.out.println("");
+        }else{
+            System.out.println("Saldo insuficiente.");
+        }
+        
+        
+    
+    }
 
-    private int gerarNumeroConta() {
+    public int gerarNumeroConta() {
         Random random = new Random();
         
         //math.random(); METODO ABSTRATO

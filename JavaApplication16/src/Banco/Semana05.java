@@ -1,11 +1,23 @@
-package Semana05;
+package Banco;
 
+import View.Sistema;
 import java.util.ArrayList;
 
 
 
 public class Semana05 {
+    
+    //DB FAKE
+    public static ArrayList<Conta> banco = new ArrayList<>();
+    
+    public static void main(String[] args){
+        new Sistema().setVisible(true);
+    
+    }
+    
+}
 
+/*
     public static void main(String[] args) {
     ArrayList<Conta> banco = new ArrayList<>();
     
@@ -25,12 +37,13 @@ public class Semana05 {
     
     
     
-        for (Conta conta : banco) {
-            System.out.println(conta.getTitular().getNome());
+        for (Conta conta : banco) {           
             conta.depositar(100.0);
-            System.out.println("");
         }
-    
+        
+        banco.get(0).sacar(500.0);
+        banco.get(2).sacar(80.0);
+        
+        banco.get(0).transferir(banco.get(2), 100.0);
     }
-
-}
+    */
